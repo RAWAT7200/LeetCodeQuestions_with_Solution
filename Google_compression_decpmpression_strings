@@ -1,0 +1,66 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+	// your code goes here
+	
+	string s="4[a]5[b]";
+	int x=0;
+	string temp="",res="";
+	stack<string> q;
+	stack<int> num;
+	q.push("");
+	for(int i=0;i<s.length();i++)
+	{
+	    if(s[i]>=48 && s[i]<=57)
+	    {
+	        x=10*x +(s[i]-48);
+	        continue;
+	    }
+	    if(s[i]=='[')
+	    {
+	        num.push(x);
+	        x=0;
+	        continue;
+	    }
+	    if(s[i]>=97 && s[i]<=122)
+	    {
+	        temp=temp+s[i];
+	        continue;
+	    }
+	    if(s[i]==']')
+	    {
+	        temp=q.top()+temp;
+	        q.pop();
+	        
+	        if(!num.empty()){
+	            int s=num.top();
+	            num.pop();
+	            string ss=temp;
+	            
+	            for(int j=1;j<=s-1;j++)
+	               temp+=ss;
+	           
+	        }
+	        
+	        if(num.empty()){
+	            res=res+temp;
+	            q.push("");
+	        }
+	        else{
+	            q.push(temp);
+	        }
+	        
+	        temp="";
+	        
+	        continue;
+	    }
+	    
+	    
+	}
+	cout<<res+temp;
+	
+	
+	return 0;
+}
