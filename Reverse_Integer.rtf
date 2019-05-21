@@ -1,0 +1,151 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red29\green38\blue42;\red255\green255\blue255;\red245\green247\blue249;
+\red29\green38\blue42;}
+{\*\expandedcolortbl;;\cssrgb\c14902\c19608\c21961;\cssrgb\c100000\c100000\c100000;\cssrgb\c96863\c97647\c98039;
+\cssrgb\c14902\c19608\c21961;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Given a 32-bit signed integer, reverse digits of an integer.\
+
+\f1\b Example 1:
+\f0\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f2\b\fs26 \cf2 \cb4 Input:
+\f3\b0  123\
+
+\f2\b Output:
+\f3\b0  321\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f1\b\fs28 \cf2 \cb3 Example 2:
+\f0\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f2\b\fs26 \cf2 \cb4 Input:
+\f3\b0  -123\
+
+\f2\b Output:
+\f3\b0  -321\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f1\b\fs28 \cf2 \cb3 Example 3:
+\f0\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f2\b\fs26 \cf2 \cb4 Input:
+\f3\b0  120\
+
+\f2\b Output:
+\f3\b0  21\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+
+\f1\b\fs28 \cf2 \cb3 Note:
+\f0\b0 \cb1 \uc0\u8232 \cb3 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [\uc0\u8722 2
+\fs21 31
+\fs28 ,\'a0 2
+\fs21 31\'a0
+\fs28 \uc0\u8722  1]. For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f4\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97***********\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+class Solution \{\
+    static int max[]=new int[]\{1,2,1,4,7,4,8,3,6,4,7\};\
+    static int min[]=new int[]\{-1,2,1,4,7,4,8,3,6,4,8\};\
+    static int[] test=new int[11];\
+    public int reverse(int x) \{\
+        int a,lh=0,sum=0;\
+        \
+        if(x==-2147483648)\
+        return 0;\
+        \
+        if(x==2147483647)\
+        return 0;\
+        \
+        if(x<0)\
+        \{a=-1;\
+        x=x*a;\
+        \}\
+         else\
+         a=1;\
+        \
+        \
+        \
+        for(lh=0;x!=0;)\
+        \{test[++lh]=x%10;\
+         x=x/10;\
+        \}\
+        \
+        \
+      if(lh==10)  \
+      \{ \
+        \
+        if(a==-1)\
+        \{test[0]=-1;\
+         \
+         for(int i=0;i<11;i++)\
+         \{\
+             if((min[i]-test[i])== 0)\
+             \{\
+                 continue;\
+                \
+             \}\
+             else if((min[i]-test[i])>0)\
+             \{\
+                 break;\
+             \}\
+             else\
+             \{\
+                 return 0;\
+             \}\
+             \
+         \}\
+           \
+        \}\
+        \
+        if(a==1)\
+        \{test[0]=1;\
+         \
+         for(int i=0;i<11;i++)\
+         \{\
+             if((test[i]-max[i])== 0)\
+             \{continue;\
+                 \
+             \}\
+             else if((test[i]-max[i])< 0)\
+             \{\
+                 break;\
+             \}\
+             else\
+                 return 0;\
+             \
+         \}\
+         \
+         \
+         \}\
+      \}\
+        \
+        \
+        \
+        for(int i=1;i<=lh;i++)\
+        \{\
+            sum=(sum*10)+test[i];\
+        \}        \
+        \
+        \
+        if(a==-1)\
+            return (sum*-1);\
+        \
+        return sum;\
+        \
+        \
+        \
+        \
+       \
+    \}\
+\}}

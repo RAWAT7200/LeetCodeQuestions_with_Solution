@@ -1,0 +1,91 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 HelveticaNeue-Bold;
+\f3\fnil\fcharset0 Menlo-Bold;\f4\fnil\fcharset0 Menlo-Regular;\f5\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red29\green38\blue42;\red255\green255\blue255;\red67\green91\blue103;
+\red245\green247\blue249;\red29\green38\blue42;}
+{\*\expandedcolortbl;;\cssrgb\c14902\c19608\c21961;\cssrgb\c100000\c100000\c100000;\cssrgb\c32941\c43137\c47843;
+\cssrgb\c96863\c97647\c98039;\cssrgb\c14902\c19608\c21961;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+\ls1\ilvl0
+\f0\fs28 \cf2 \cb3 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 (i.e., \'a0
+\f1\fs26 \cf4 \cb5 \strokec4 [0,1,2,4,5,6,7]
+\f0\fs28 \cf2 \cb3 \strokec2 \'a0might become \'a0
+\f1\fs26 \cf4 \cb5 \strokec4 [4,5,6,7,0,1,2]
+\f0\fs28 \cf2 \cb3 \strokec2 ).\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Find the minimum element.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 You may assume no duplicate exists in the array.\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+\ls1\ilvl0
+\f2\b \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example 1:
+\f0\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+\ls1\ilvl0
+\f3\b\fs26 \cf2 \cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Input:
+\f4\b0  [3,4,5,1,2] \
+\ls1\ilvl0
+\f3\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Output:
+\f4\b0  1\
+\pard\pardeftab720\sl340\sa280\partightenfactor0
+\ls1\ilvl0
+\f2\b\fs28 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Example 2:
+\f0\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+\ls1\ilvl0
+\f3\b\fs26 \cf2 \cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Input:
+\f4\b0  [4,5,6,7,0,1,2]\
+\ls1\ilvl0
+\f3\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Output:
+\f4\b0  0\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f0\fs28 \cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f5\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97***********\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+class Solution \{\
+public:\
+    int findMin(vector<int>& nums) \{\
+         int first=0;\
+        int last=nums.size()-1;\
+        int mid;\
+        while(first<=last)\
+        \{\
+            mid=(first+last)/2;\
+            \
+            if(nums[mid]>=nums[first] && nums[mid]<=nums[last])\
+            \{\
+                last=mid-1;\
+            \}\
+            else if(nums[mid]<=nums[first] && nums[mid]<=nums[last])\
+            \{\
+                first=first+1;\
+                last=last-1;\
+            \}\
+            else\
+            \{\
+                first=mid+1;\
+            \}\
+                \
+        \}\
+        return nums[mid];\
+        \
+    \}\
+\};}
